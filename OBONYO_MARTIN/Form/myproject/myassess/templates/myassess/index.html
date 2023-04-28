@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+        <link rel="stylesheet" href="{% static 'css/main.css' %}">
+        <script src=""></script>
+    </head>
+<body>	
+<h3>GENQ KYC FORM</h3>
+<form action="{% url 'register' %}" id="forms_form" method="POST" enctype="multipart/form-data">
+	{% csrf_token %}
+	<h4>Bio Data</h4>
+	<hr>
+	
+		       <input type="text" id="fname" name="first_name" placeholder="First Name" required>
+		       
+		       <input type="text" id="fname" name="last_name" placeholder="Last Name" required>
+			   <br><br>
+		    
+		       
+		       <input type="text" id="fname" name="date_of_birth" placeholder="Date of birth (DD/MM/YYYY)" required>
+		       
+		       <input type="text" id="fname" name="gender" placeholder="Gender" required>
+
+    <h4>Location</h4>
+	<hr>
+	          
+	          <input type="text" id="fname" name="country" placeholder="Country" required>
+	          
+			  <input type="text" id="fname" name="district" placeholder="State / District" required>
+	          <br><br>
+ 
+	          
+	          <input type="text" id="fname" name="town" placeholder="Town" required>
+	          
+	          <input type="text" id="fname" name="zip_code" placeholder="Zip Code" required>
+			  <br><br>
+    <h4>Contacts And Address<h5>
+    <hr>
+	         
+	         <input type="text" id="fname" name="phone_number" placeholder="Phone Number" required>
+	         
+	         <input type="text" id="fname" name="fname" placeholder="Phone Number" required>
+	         <br><br>
+ 
+	         <input type="text" id="fname" name="email" placeholder="Email" required>
+	         
+	        <br><br>
+	        <input type="submit" value="Submit">
+	       <br><br>
+	
+</form>
+</body>
